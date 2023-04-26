@@ -1,0 +1,92 @@
+<%@page import = "java.sql.*"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+       
+        <style>
+            
+                .container{
+               width: 80%;
+            margin: 0 auto;
+             justify-content: center;
+            padding: 20px;
+            }
+            
+	
+		/* Centering the information */
+		.Confirmation Details {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 20px 0;
+		}
+                
+                .confirmation-label {
+			font-weight: bold;
+			margin-right: 10px;
+		}
+            /* Footer styling */
+		footer {
+			background-color: #c0c0c0;
+			padding: 20px;
+			text-align: center;
+		}
+ 
+</style>
+
+    </head>
+    
+<body>
+	
+                
+	
+    <div class="container">
+	<div class="Confirmation Details">
+		<span class="confirmation-label">Confirmation Number:</span>
+		<span> </span>
+	</div>
+
+	<div class="Confirmation Details">
+		<span class="confirmation-label">Session ID:</span>
+		<span>  </span>
+	</div>
+
+	<div class="Confirmation Details">
+		<span class="confirmation-label">Tutor's Name:</span>
+		<span>  </span>
+	</div
+        
+        <div class="Confirmation Details">
+		<span class="confirmation-label">Date:</span>
+		<span>  </span>
+        
+        <div class="Confirmation Details">
+		<span class="confirmation-label">Start Time:</span>
+		<span>  </span>
+                
+        <div class="Confirmation Details">
+		<span class="confirmation-label">End Time:</span>
+		<span>  </span>
+        </div>
+       
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+            <h5>Footer</h5>
+        </footer>
+
+        <footer class="w3-container w3-theme-d5">
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </footer>
+
+
+    </body>
+</html>
