@@ -1,8 +1,3 @@
-<%-- 
-    Document   : BookingSession
-    Created on : Apr 26, 2023, 11:40:08 AM
-    Author     : brian
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import = "java.sql.*"%>
@@ -10,7 +5,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-   
+
         <title>Zest || Booking Session</title>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
@@ -70,8 +65,10 @@
                     </tr>
 
                     <%
-
+                        String studentID = request.getParameter("studentID");
+                        session.setAttribute("studentID", studentID);
                         try {
+
                             Class.forName("com.mysql.jdbc.Driver");
                             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/zest", "root", "admin");
 
@@ -97,27 +94,27 @@
                         <td><%= startTime%></td>
                         <td><%= endTime%></td>
                         <!-- comment 
-                        <a href="ConfirmationProcess.jsp" onclick="bookSession(<%= sessionID %>)"><button>BOOK NOW</button></a></td>-->
-                    <td>   
-                    <form action ="ConfirmationProcess.jsp">
-                    <input type = "hidden" id = "sessionid" name="sessionid" value=<%=sessionID%>>
-                    <input type="submit" id="submit" onclick="bookSession(<%= sessionID %>)">
-                         </form>
-                    </td>
-                    </tr>
+                        <td><a href="ConfirmationProcess.jsp" onclick="bookSession(<%= sessionID%>)"><button>BOOK NOW</button></a></td>-->
+                        <td>   
+                            <form action ="ConfirmationProcess.jsp">
+                                <input type = "hidden" id = "sessionid" name="sessionID" value=<%=sessionID%>>
+                                <input type="submit" id="submit" onclick="bookSession(<%= sessionID%>) value = "BOOK NOW">
+                                </form>
+                          </td>
+                                </tr>
 
-                    <%
-                            }//end while loop
-                            //
-                            con.close();
-                        } catch (Exception e) {
-                            out.println(e);
-                        }//
+                                       <%
+                                               }//end while loop
+                                               //
+                                               con.close();
+                                           } catch (Exception e) {
+                                               out.println(e);
+                                           }//
 
-                    %>
-                </table>
-                
-                
-    <body>             
-   
+                                       %>
+                        < /table>
+
+
+                                <body>             
+
 </html>
